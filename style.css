@@ -1,0 +1,37 @@
+body {
+    font-faamily: Arial, sans-serif;
+    text-align: center;
+    background: #39bebc;
+    margin: 0;
+    padding: 20px;
+}
+
+header{
+
+    margin-bottom:20px;
+}
+
+button{
+
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #be4fd1c3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    flex-wrap: wrap;
+}
+
+.grid{
+    display: grid;
+    gap: 2px;
+    background: #ccc;
+}
