@@ -1,18 +1,16 @@
 body {
-    font-faamily: Arial, sans-serif;
+    font-family: Arial, sans-serif;
     text-align: center;
     background: #39bebc;
     margin: 0;
     padding: 20px;
 }
 
-header{
-
-    margin-bottom:20px;
+header {
+    margin-bottom: 20px;
 }
 
-button{
-
+button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -26,11 +24,11 @@ button{
 .container {
     display: flex;
     justify-content: center;
-    gap:30px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
-.grid{
+.grid {
     display: grid;
     gap: 2px;
     background: #ccc;
