@@ -92,4 +92,6 @@ function iniciarJogo() {
     const listaHtml = document.getElementById('word-list');
     listaHtml.innerHTML = palavrasAtuais.map(p => `<li id="palavra-${p}">${p}</li>`).join('');
 }
+
+// Inicia o jogo ao carregar a página
 iniciarJogo();
