@@ -92,6 +92,35 @@ function iniciarJogo() {
     const listaHtml = document.getElementById('word-list');
     listaHtml.innerHTML = palavrasAtuais.map(p => `<li id="palavra-${p}">${p}</li>`).join('');
 }
+// Função responsável por checar se o que o jogador clicou formou uma palavra certa
+function verificarPalavra(){
+    let selecionadas =
+    Array.from(document.querySelectorAll('.cell.selected'));
+
+    let textoSelecionado = selelcionadas.map(c => c.textContent).join('');
+
+    let textoInvertido = textoSelecionado.split('').reverse().join('');
+
+    let achou= palavrasAtuais.find(p => p === textoSelecionado || p === textoInvertido);
+    if(achou){
+        selecionadas.ForEacg(c=> {
+            c.classList.remove('selected');
+            c.classList.add('found');
+        });
+        document.getElementById(`palavra-${achou}`).classList.add('found');
+        palavrasAtuais = palavrasAtuais.filter(p => p !== achou);
+
+        if (palavrasAtuais.length === 0) {
+            setTimeout(() => alert("Parabéns! Você encontrou todas as palavras!"), 100);
+        }
+    } else if (selecionadas.length >= tamanhoGrid) {
+        selecionadas.forEach(c => c.classList.remove('selected'));
+    }
+}
+
+// Conecta o botão "Novo Jogo" (id="btn-new") à função iniciarJogo
+document.getElementById('btn-new').onclick = iniciarJogo;
 
 // Inicia o jogo ao carregar a página
 iniciarJogo();
+
